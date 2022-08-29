@@ -1,8 +1,31 @@
+@font-face {
+  font-family: 'Boncegro';
+  src: url(/public/fonts/Boncegro.otf);
+}
+
+@font-face {
+  font-family: 'RezaZulmiSerif';
+  src: url(/public/fonts/RezaZulmiSerif.ttf);
+}
+
+@font-face {
+  font-family: 'TerminatorGenisys';
+  src: url(/public/fonts/TerminatorGenisys.ttf);
+}
+
+@font-face {
+  font-family: 'VtksReverso';
+  src: url(/public/fonts/VtksReverso.ttf);
+}
+
+@font-face {
+  font-family: 'libertinusmath';
+  src: url(/public/fonts/libertinusmath-regular.otf);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +33,140 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+nav {
+  padding: 0 1rem;
+  background-color: #00bcd4;
+  border-bottom: 3px solid silver;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+}
+
+.goods {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+
+.page-footer {
+  background-color: #00bcd4;
+  border-top: 3px solid silver;
+}
+
+.card {
+  margin: 1rem;
+  display: flex;
+  flex-flow: column;
+  border: 3px solid silver;
+  font-weight: 300;
+  border-radius: 5px;
+}
+
+.btn, .btn-large, .btn-small {
+  background-color:#00bcd4;
+  font-family: 'libertinusmath';
+}
+
+.card-action {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+
+}
+
+
+.title{
+ text-align: center;
+ font-weight: 800;
+ font-size: 20px;
+}
+
+.card-content {
+  flex-grow: 1;
+  font-family: 'libertinusmath';
+  
+}
+
+.nav-wrapper .input-field input[type=search] {
+  height: auto;
+  border-radius: 15px;
+}
+
+nav .brand-logo {
+  font-family: 'VtksReverso';
+  font-size: 55px;
+  color: white;
+}
+
+.right.hide-on-med-and-down {
+  font-family: 'TerminatorGenisys';
+}
+
+.btn-large.cyan.pulse {
+  position: fixed;
+  bottom: 2rem;
+  right: 5rem;
+
+  cursor: pointer;
+  z-index: 5;
+  font-size: 16px;
+  font-family: 'TerminatorGenisys';
+}
+
+@media (min-width: 767px) {
+  .btn-large.cyan.pulse{
+    top: 6.7rem;
+    bottom: unset;
+  }
+}
+
+.collection {
+  border: 3px solid silver;
+}
+
+.collection .collection-item.active {
+  background-color:#00bcd4;
+  color: black;
+}
+
+
+.basket-list {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: white;
+  width: 50rem;
+  max-width: 95%;
+  border-radius: 15px;
+
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+  animation: show 500ms ease-in-out;
+}
+
+.basket-close {
+  cursor: pointer;
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: white;
+}
+
+.basket-delite{
+  cursor: pointer;
+}
+
+@keyframes show {
+  from {
+    top: 70%;
+    opacity: 0;
+  }
+  to {
+    top: 50%;
+    opacity: 1;
+  }
 }
